@@ -10,6 +10,10 @@ app.listen(PORT, () => {
   console.log(`Server listening to PORT: ${PORT}`);
 });
 
+app.get("/", (req, res) => {
+  res.send("YouTube MP3/MP4 convertor backend");
+});
+
 app.get("/mp3", async (req, res, next) => {
   try {
     var url = req.query.url;
